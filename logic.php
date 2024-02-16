@@ -20,8 +20,8 @@
         // $sql = "INSERT INTO myblogs (author, title, body, category, img, reg_date) 
         // VALUES ('$author', '$title',  '$body', '$category', '$img', '$reg_date')";
 
-        $sql = "INSERT INTO myblogs (author, title, body, category, img, reg_date) 
-        VALUES ('$author', '$title',  '$body', '$category', '$img', '$reg_date')";
+        $sql = "INSERT INTO myblogs (author, title, body, category, img) 
+        VALUES ('$author', '$title',  '$body', '$category', '$img')";
 
         mysqli_query($conn, $sql);
 

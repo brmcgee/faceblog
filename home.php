@@ -54,7 +54,7 @@
     <?php 
        foreach($query as $q) { 
     ?>   
-            <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-center">
+            <!-- <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-center">
                 <div class="card  alert alert-light mt-3 shadow-lg border-dark"  style="width:28rem;min-height:24rem;">
                     <div class="card-body">
                         <p><span class="badge bg-dark float-end fs-6"><?php echo $q['category']; ?></span></p>
@@ -74,13 +74,33 @@
                             </div>
                     </div>
                 </div>
-            </div>              
+            </div>   -->
+            
+        <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-center mb-3">
+            <div class="card h-100 shadow-xl border border-secondary" style="width:23rem;min-height:22rem;"> 
+                <img src="<?php echo $q['img']; ?>" class="card-img-top" alt="<?php echo $q['title']; ?>"> 
+                <div class="card-body"> 
+                    <div class="clearfix mb-3"> 
+                        <p><span class="float-end"></span></p>
+                        <span class="float-start badge rounded-pill bg-primary"><?php echo $q['category']; ?></span> 
+                    </div> 
+                    <h6><?php echo $q['title']; ?></h6>
+                    <p class="card-title fs-strong pb-5"><?php echo $q['body']; ?></p> 
+                    <div class="my-4"> 
+                        <div class="btn-group position-absolute" style="bottom:0px;">
+                            <p class="small position-absolute" style="bottom:30px;"><?php echo $q['reg_date']; ?> <span> -<?php echo $q['id']; ?></span></p>
+                            <a href="edit.php?id=<?php echo $q['id']; ?> " class="btn btn-dark btn-sm mb-2">Edit <span class="text-warning">&rarr;</span></a>
+                            <a class="ms-1" href="view.php?id=<?php echo $q['id']; ?> "><span class="btn btn-secondary btn-sm">View Comment</span></a>
+                            <a class="ms-1"  href="comment.php?id=<?php echo $q['id']; ?>"><span class="btn btn-primary btn-sm">Leave Comment</span></a></td>
+                        </div>
+                    </div> 
+                </div> 
+            </div> 
+        </div>
 
 
 <?php } ?>
    
-
-
 
 
 

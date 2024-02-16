@@ -6,11 +6,11 @@
 <body>
 
 <?php foreach ($query as $q) { ?>
-<div class="container">   
-    <div class="card mb-3" style="max-width: 540px;">
+<div class="container ">   
+    <div class="card mb-3 border border-secondary shadow-lg mx-auto" style="max-width: 840px;">
     <div class="row g-0">
         <div class="col-md-4">
-        <img src="<?php echo $q['img']; ?>" class="img-fluid rounded-start" alt="...">
+        <img src="<?php echo $q['img']; ?>" class="img-fluid rounded-start" alt="<?php echo $q['category']; ?>">
         </div>
         <div class="col-md-8">
         <div class="card-body">
@@ -23,7 +23,7 @@
     </div>
 </div> 
     
-<div class="container mt-5 col-sm-12 col-md-8">
+<div class="container mt-5 col-sm-12 col-md-6">
     <form method="POST" enctype="multipart/form-data" class="form-group">
         <div class="row">
             <div class="col-6">

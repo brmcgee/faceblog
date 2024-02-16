@@ -15,29 +15,30 @@
 
     <div class="container-xl overflow-hidden p-1 mt-3">
 
-    <table class='table table-bordered table-striped'>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>Title</td>
-            <td>Image</td>
-            <td>Author</td>
-            <td>Date</td>
-        </tr>
 <?php include_once('nav.php'); ?>
 
 <?php foreach($query as $row) { ?>
 
-        <tr>
-            <td><a class="ms-3 me-0" href="edit.php?id=<?php echo $row['id']; ?> "><span class="badge text-bg-secondary bg-primary">Edit</span></a></td>
-            <td><a class="ms-3 me-0" href="comment.php?id=<?php echo $row['id']; ?> "><span class="badge text-bg-secondary bg-primary">Leave Comment</span></a></td>
-            <td><a class="ms-3 me-0" href="view.php?id=<?php echo $row['id']; ?> "><span class="badge text-bg-secondary bg-primary">View Comment</span></a></td>
-            <td><?php echo $row["title"]; ?></td>
-            <td><img src="<?php echo $row["img"]; ?>" alt="" style="height:70px;width:80px;"></td>
-            <td><?php echo $row["author"]; ?></td>
-            <td><?php echo $row["reg_date"]; ?></td>
-        </tr>
+    
+
+        <div class="px-4 pt-5 my-5 text-center border-bottom">
+        <h1 class="display-4 fw-bold text-body-emphasis"><?php echo $row["title"]; ?></h1>
+        <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4"><?php echo $row['body']; ?></p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+                <a class="ms-3 me-0" href="edit.php?id=<?php echo $row['id']; ?> "><span class="btn btn-primary">Edit</span></a>
+                <a class="ms-3 me-0" href="comment.php?id=<?php echo $row['id']; ?> "><span class="btn btn-outline-primary">Leave Comment</span></a>
+                <a class="ms-3 me-0" href="view.php?id=<?php echo $row['id']; ?> "><span class="btn btn-outline-primary">View Comments</span></a>
+        </div>
+        </div>
+        <div class="overflow-hidden" style="max-height: 30vh;">
+        <div class="container px-5">
+            <img src="<?php echo $row['img']; ?>" class="img-fluid border rounded-3 shadow-lg mb-4" alt="<?php echo $row['category']; ?>" width="700" height="500" loading="lazy">
+        </div>
+        </div>
+    </div>
+
+
 
 
     </div>   

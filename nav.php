@@ -5,8 +5,8 @@
         <header class="d-flex justify-content-center py-3">
         <ul class="nav nav-pills">
             <li class="nav-item"><a href="home.php" class="nav-link active" aria-current="page">Home</a></li>
-            <!-- <li class="nav-item"><a href="create.php" class="nav-link">Create</a></li> -->
-            <li class="nav-item"><a href="index.php" class="btn btn-outline-primary mx-1">Table</a></li>
+            <li class="nav-item"><a href="index.php" class="nav-link">Index</a></li>
+            <li class="nav-item"><a href="table.php" class="btn btn-outline-primary mx-1">Table</a></li>
             <!-- <li class="nav-item"><a href="edit.php?id=1" class="nav-link">Edit</a></li> -->
             <li class="nav-item"><button type="button" class="btn btn-outline-primary " data-bs-toggle="modal" data-bs-target="#exampleModal">New</button></li>
         </ul>

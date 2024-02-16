@@ -78,15 +78,15 @@
     
     ?>   
             <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-center">
-                <div class="card  alert alert-light mt-3 shadow-lg border-dark"  style="width:24rem;height:12rem;">
+                <div class="card  alert  mt-3 shadow-lg "  style="width:24rem;height:12rem;">
                     <div class="card-body">
 
                             <div class="d-flex justify-content-between">
                                 <div class="container">
-                        
-                                    <p>Comment - <?php echo $q['comment']; ?> </p>
-
-                                    <p class="small">From - <?php echo $q['author']; ?> <span> -<?php echo $q['date']; ?></span></p>
+    
+                                    <p class="lead">- <?php echo $q['comment']; ?> </p>
+                                    <p class="mb-0">From - <?php echo $q['author']; ?> </p>
+                                    <p class m-0 p-0><?php echo $q['date']; ?></p>
                                 </div>
                             </div>
                     </div>
@@ -96,4 +96,5 @@
      <?php 
         } 
      ?>
+
 
