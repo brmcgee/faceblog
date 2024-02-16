@@ -14,4 +14,10 @@
     <link href="app.js" rel="script">
 
     <link rel="icon" href="b.ico"/>
+
+    <style>
+        *{
+            
+        }
+    </style>
     

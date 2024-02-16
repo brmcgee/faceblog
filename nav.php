@@ -1,12 +1,12 @@
 <?php include("logic.php"); ?>
 <?php include_once("head_section.php") ?>
 
-    <div class="container">
+    <div class="container border-bottom shadow-xl mb-1 bg-light">
         <header class="d-flex justify-content-center py-3">
         <ul class="nav nav-pills">
-            <li class="nav-item"><a href="home.php" class="nav-link active" aria-current="page">Home</a></li>
-            <li class="nav-item"><a href="index.php" class="nav-link">Index</a></li>
-            <li class="nav-item"><a href="table.php" class="btn btn-outline-primary mx-1">Table</a></li>
+            <li class="nav-item"><a href="index.php" class="nav-link active" aria-current="page">Home</a></li>
+            <!-- <li class="nav-item"><a href="index.php" class="nav-link">Index</a></li> -->
+            <li class="nav-item"><a href="table.php" class="btn btn-outline-dark mx-1">Table</a></li>
             <!-- <li class="nav-item"><a href="edit.php?id=1" class="nav-link">Edit</a></li> -->
             <li class="nav-item"><button type="button" class="btn btn-outline-primary " data-bs-toggle="modal" data-bs-target="#exampleModal">New</button></li>
         </ul>

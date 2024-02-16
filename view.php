@@ -36,7 +36,8 @@
                         </div>
                     </div>
                     <div class="card-title mt-5">
-                        <a href="comment.php?id=<?php echo $q['id']; ?> "><span class="btn btn-primary btn-sm">Leave Comment</span></a></td>
+                       <a href="edit.php?id=<?php echo $q['id']; ?> " class="btn btn-outline-dark btn">Edit <span class="text-light">&rarr;</span></a>
+                        <a href="comment.php?id=<?php echo $q['id']; ?> "><span class="btn btn-primary btn">Leave Comment</span></a></td>
                     </div>
                 </div>
             </div>

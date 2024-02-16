@@ -12,6 +12,7 @@
     $query = mysqli_query($conn, $sql);    
 
 ?>
+            <p class="nav-item"><a href="home.php" class="btn btn-outline-dark mx-1">shortcut</a></p>
 
     <div class="container-xl overflow-hidden p-1 mt-3">
 

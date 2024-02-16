@@ -6,13 +6,13 @@
 <body>
 
 <?php foreach ($query as $q) { ?>
-<div class="container ">   
+<div class="container-lg ">   
     <div class="card mb-3 border border-secondary shadow-lg mx-auto" style="max-width: 840px;">
     <div class="row g-0">
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-12">
         <img src="<?php echo $q['img']; ?>" class="img-fluid rounded-start" alt="<?php echo $q['category']; ?>">
         </div>
-        <div class="col-md-8">
+        <div class="col-md-8 col-sm-12">
         <div class="card-body">
             <h5 class="card-title"><?php echo $q['title']; ?></h5>
             <p class="card-text">Author- <?php echo $q['author']; ?></p>

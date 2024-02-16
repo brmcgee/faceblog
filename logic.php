@@ -77,6 +77,10 @@
         $sql = "DELETE FROM myblogs WHERE id = $id";
         $query = mysqli_query($conn, $sql);
 
+        $comment_sql = "DELETE FROM comments WHERE post_id = $id";
+        $comment_query = mysqli_query($conn, $comment_sql);
+
+
         // location where to be directed to after sql query 
         header("Location: home.php?info=deleted");
         exit();
