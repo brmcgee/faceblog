@@ -7,13 +7,6 @@
     $conn = mysqli_connect($servername, $username, $password, $dbname);
 
     
-    // $servername = 'sql108.byetcluster.com';
-    // $username = 'epiz_33444535';
-    // $password = 'oCiusB9IgJL';
-    // $dbname = "epiz_33444535_faceblog";
-    // $conn = mysqli_connect($servername, $username, $password, $dbname);
-
-
 
     $conn = new mysqli($servername, $username, $password, $dbname);
 
