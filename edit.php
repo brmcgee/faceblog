@@ -1,23 +1,28 @@
+<?php
+require('access.php');
+?>
+
 <?php include("logic.php"); ?>
 <?php include_once("head_section.php") ?>
 <?php include_once("nav.php") ?>
     <title>Edit Guest</title>
 </head>
 <body>
+  
 
-<?php foreach ($query as $q) { ?>
-
-<div class="container mt-5 col-sm-12 col-md-8">
+<div class="container px-3mt-5 col-sm-11 col-md-8 mb-5">
+<?php foreach ($query as $q) {   
+?>
     <form method="PUT" enctype="multipart/form-data" class="form-group">
+        <h3>Welcome <?php echo  $_SESSION['a_user'];?></h3>
         <div class="row">
             <div class="col-12">
-                <h4>Blog ID <?php echo $q['id']; ?> </h4>
                 <label for="id" hidden>Id</label>
                 <input  type="text" name="id" hidden placeholder="id" value="<?php echo $q['id']; ?>" class="form-control bg-light  my-3 text-center">
             </div>
             <div class="col-sm-12 col-md-6">
-                <label for="author">Author</label>
-                <input type="text" name="author" value="<?php echo $q['author']; ?>" class="form-control bg-light  my-3 text-center"> 
+                <label for="author" hidden>Author</label>
+                <input type="text" hidden name="author" value="<?php echo $q['author']; ?>" class="form-control bg-light  my-3 text-center"> 
             </div>
             <div class="col-sm-12 col-md-6">
                 <label for="date">Date</label>
@@ -65,7 +70,7 @@
       <form method="post">
             <input type="text" hidden name="id" value="<?php echo $q['id']; ?>">
             <div class="container text-center">
-                <p>You are about to delete a contact. Once a contact is deleted it can not be undone. Are you sure you want to delete contact?</p>
+                <p><?php echo  $_SESSION['a_user'];?>, you are about to delete a contact. Once a contact is deleted it can not be undone. Are you sure you want to delete contact?</p>
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <button class="btn btn-danger ms-1" name="delete">Delete</button>
             </div>

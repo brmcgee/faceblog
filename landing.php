@@ -1,4 +1,4 @@
-<?php  session_start(); ?>
+<?php require('access.php'); ?>
 
 <?php
     include_once('head_section.php');
@@ -13,15 +13,10 @@
 ?>
 
 <!-- top hero image jumbotron  -->
-
-    <a href="#top" class="position-fixed" style="z-index:100; bottom:05px;right:20px;font-size:50px;"><span class="material-symbols-outlined">
-arrow_upward
-</span></a>
-    <div class="container-xl overflow-hidden p-1 mt-3" id="top">
-
+    <div class="container-xl overflow-hidden p-1 mt-3">
 <?php include_once('nav.php'); ?>
 
-      <div class="px-4 pt-5 my-5 text-center border-bottom" style="background-color:rgb(204, 206, 209);">
+<div class="px-4 pt-5 my-5 text-center border-bottom" style="background-color:rgb(204, 206, 209);">
         <h1 class="display-4 fw-bold text-body-emphasis">Blog App Beta</h1>
         <div class="col-lg-6 mx-auto">
             <p class="lead mb-4">Beta version of blog app. Visit back for updates. Sign in and add a post.</p>
@@ -33,11 +28,11 @@ arrow_upward
         </div>
     </div>
     <!-- blog post cards all  -->
-    <div class="row m-0 p-0">
+    <div class="row">
 <?php foreach($query as $q) { ?>
 
-    <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-center mb-2">
-        <div class="card h-100" style="width:100%;min-height:21rem;border-radius:0;box-shadow:0px 0px 32px rgb(186, 189, 192);"> 
+    <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-center mb-5">
+        <div class="card h-100" style="width:20rem;min-height:21rem;border-radius:0;box-shadow:0px 12px 32px rgb(186, 189, 192);"> 
             <div class="overflow-hidden" style="max-height: 32vh;">
                 <div class="container px-0">
                     <img src="<?php echo $q['img']; ?>" class="img-fluid" alt="<?php echo $q['category']; ?>" width="900" height="600" loading="lazy">
