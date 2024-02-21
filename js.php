@@ -10,6 +10,20 @@
     <title>Home - faceblog</title>
   </head>
     <body class="bg-main">
+        <script>
+            let blogger = [
+            {
+                title : "ss",
+                id : "ss",
+                body : "ss",
+                img : "ss",
+                author : "ss",
+                avatar: "ss"
+            }            
+            ]; 
+
+            let count = 0;
+        </script>
 
 <?php include_once('nav.php'); ?>
 
@@ -42,6 +56,17 @@
                 $avatar_img  = $q['author_avatar'];
             };
 ?>  
+<script>
+
+            blog
+    blog_title.push(`<?php echo $q['title']; ?>`);
+    blog_id.push(`<?php echo $q['id']; ?>`);
+    blog_body.push(`<?php echo $q['body']; ?>`);
+    blog_img.push(`<?php echo $q['img']; ?>`);
+    blog_author.push(`<?php echo $q['author']; ?>`);
+    blog_author_avatar.push(`<?php echo $q['author_avatar']; ?>`);
+
+</script>
 
     
     <section class="mx-auto col-sm-12 col-md-6 col-lg-5 mt-2" style="max-width: 29rem; min-height: 80vh;">

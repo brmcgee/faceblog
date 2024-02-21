@@ -3,10 +3,12 @@
 <title>Home - faceblog</title>
 </head>
 <body>
-    
+
 <?php include_once('nav.php') ?>
 
-<div class="container">
+
+
+<div class="container pb-5">
 <?php  
     // select all records from db accesibly by $query 
     $sql = "SELECT * FROM myblogs";
@@ -18,25 +20,25 @@
 
     <?php if($_REQUEST['info'] == "added") { ?>
  
-        <div class="alert alert-success" role="alert">
+        <div class="alert alert-success mt-3" role="alert">
             Post has been added successfully
         </div>
 
     <?php } else if($_REQUEST['info'] == "updated"){ ?> 
 
-        <div class="alert alert-info" role="alert">
+        <div class="alert alert-info mt-3" role="alert">
             Post has been updated successfully
         </div>
 
     <?php } else if($_REQUEST['info'] == "newuser"){ ?> 
 
-        <div class="alert alert-primary" role="alert">
+        <div class="alert alert-primary mt-3" role="alert">
             Succesfully created account
         </div>
 
     <?php } else if($_REQUEST['info'] == "invalid"){ ?> 
 
-        <div class="bg-warning text dark p-3 m-1 h6" role="alert">
+        <div class="bg-warning text dark p-3 mt-3 h6" role="alert">
             Invalid credentials please try again!
         </div>
     <?php } else if($_REQUEST['info'] == "loggedOut"){ ?> 
@@ -44,6 +46,17 @@
         <div class="alert alert-danger py-3 mt-3" role="alert">
             You have been successfully logged out!
         </div>        
+
+        <div class="px-4 py-5 my-5 text-center">
+            <h1 class="display-5 fw-bold text-body-emphasis">Goodbye!</h1>
+            <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">Come back soon....you hear!</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <!-- <button type="button" class="btn btn-primary btn-lg px-4 gap-3" fdprocessedid="das8is">Primary button</button>
+                <button type="button" class="btn btn-outline-secondary btn-lg px-4" fdprocessedid="69e2lq">Secondary</button> -->
+            </div>
+            </div>
+        </div>
 
     <?php } else if($_REQUEST['info'] == "comment"){ ?> 
 
@@ -53,7 +66,7 @@
 
     <?php } else if($_REQUEST['info'] == "deleted"){ ?> 
 
-        <div class="alert alert-danger mt-1 p-1" role="alert">
+        <div class="alert alert-danger mt-1 p-3" role="alert">
             Blog post has been deleted
         </div>
         
@@ -68,8 +81,9 @@
     <?php 
        foreach($query as $q) { 
     ?>   
-            
-            <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-center mb-2">
+     
+     
+    <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-center mb-2">
         <div class="card h-100" style="width:100%;min-height:21rem;border-radius:0;box-shadow:0px 0px 32px rgb(186, 189, 192);"> 
             <div class="overflow-hidden" style="max-height: 32vh;">
                 <div class="container px-0">

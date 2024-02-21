@@ -1,30 +1,8 @@
 <?php include("logic.php"); ?>
 <?php include_once("head_section.php") ?>
-<style>
-    .user-chip {
-    display: inline-block;
-    padding: 0 25px;
-    height: 52px;
-    font-size: 16px;
-    line-height: 52px;
-    border-radius: 0px;
-    background-color: #f1f1f1;
-    box-shadow: 0 0 28px grey;
-    
-  }
-  
-  .user-chip img {
-    float: left;
-    margin: 0 10px 0 -25px;
-    height: 52px;
-    width: 52px;
-    border-radius: 50%;
-  }
 
-  
-</style>
 <?php 
-
+    // sets value of session variable info, if none adds login link 
     if (isset($_SESSION['a_avatar'])) {
         $avatar = $_SESSION['a_avatar'];
     } else {
@@ -34,29 +12,33 @@
     if (isset($_SESSION['a_user'])) {
         $display_name = $_SESSION['a_user'];
     } else {
-        $display_name = '<a href="landing.php" class="text-decoration-none text-dark"><span class="material-symbols-outlined fs-1 pt-2">login</span></a>';
+        $display_name = '<a href="landing.php" class="text-decoration-none text-dark">
+                            <span class="icon-reg text-primary fs-5">Login</span>
+                        </a>';
     };
     if (isset($_SESSION['a_date'])) {
         $display_date = $_SESSION['a_date'];
     } else {
         $display_date = '';
     };
-
 ?>
+
+
+    <!-- top botton -->
+    <a href="#top" class="position-fixed" style="z-index:100; bottom:05px;right:20px;font-size:50px;width:50px;"><span class="material-symbols-outlined">arrow_upward</span></a>
+    
     <!-- render all blog from db from $query in logic.php  -->
-    <div class="row">   
+    <div class="row" id="top">   
       <div class="container-md border-bottom shadow-xl mb-1 bg-light">
         <header class="d-flex justify-content-end py-3">
-        <div class="user-chip position-absolute"  id="userChip" style="left:4px;top:22px;">
+        <div class="user-chip me-5"  id="userChip">
             <img src=" <?php echo $avatar;?>" alt="" width="96" height="96">
             <small class="mb-5"><?php echo $display_name;?></small>
-            <small class="position-absolute" style="bottom:-17px;left:55px;"><?php echo $display_date;?></small>
         </div>
 
         <ul class="nav nav-pills">
             <li class="nav-item"><a href="index.php" class="" aria-current="page"><span class="material-symbols-outlined fs-1">home</span></a></li>
-            <!-- <li class="nav-item"><a href="table.php" class="btn btn-outline-dark mx-1">Table</a></li> -->
-            <!-- <li class="nav-item"><a href="edit.php?id=1" class="nav-link">Edit</a></li> -->
+            <!-- <li class="nav-item"><a href="table.php" class="nav-link">table</a></li> -->
             <!-- <li class="nav-item ms-1"><button type="button" class="btn btn-outline-primary " data-bs-toggle="modal" data-bs-target="#exampleModal">New</button></li> -->
             <li class="nav-item"><a href="create.php" class="border-none ms-3"><span class="material-symbols-outlined fs-1">add_circle</span></a></li>
             <li class="nav-item"><a href="logout.php" class="border-none ms-3 pe-3" id="logOutBtn"><span class="material-symbols-outlined fs-1">logout</span></a></li>
